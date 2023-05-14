@@ -1,0 +1,47 @@
+.basket-page-header img{
+    width: 15rem;
+}
+.header-title {
+    color: #fd7e14;
+    font-weight: bold;
+}
+
+.card i {
+    color: #0d6efd;
+}
+
+.bi-textarea-t {
+    font-size: 1.1rem;
+}
+
+.text-mute {
+    color: #6c757d;
+}
+
+.continues:hover {
+    color: #fd7e14;
+}
+
+.card:hover {
+    filter: drop-shadow(0px 0px 0px #fff);
+}
+
+.article-cards {
+    margin: 5rem auto;
+}
+
+.article-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.dark .text-mute {
+    color: #c0bebe;
+}
+
+
+.dark .card i {
+    color: #5eff50;
+}
+

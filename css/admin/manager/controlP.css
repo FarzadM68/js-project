@@ -1,0 +1,660 @@
+@font-face {
+    font-family: 'Vazir';
+    src: url('../../../fonts/Vazir.eot');
+    /* IE9 Compat Modes */
+    src: url('../../../fonts/Vazir.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../../../fonts/Vazir.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../../../fonts/Vazir.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../../../fonts/Vazir.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+}
+
+html,
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(56, 56, 56);
+}
+
+/* ////////////// modal clear all products ///////////////////// */
+.modal-parent22 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: none;
+}
+
+.modal22 {
+    background-color: rgb(255, 89, 89);
+    color: #eee;
+    width: 50%;
+    border-radius: 10px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    padding: 1rem 0 2.5rem 0;
+    transform: translate(-50%, -50%);
+    animation: 1s farzad;
+}
+
+@keyframes farzad {
+    0% {
+        top: -100px;
+    }
+
+    100% {
+        top: 30%;
+    }
+}
+
+/* /////////////// add to stor /////////////////// */
+.addparent-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 1070;
+    display: none;
+}
+
+.addProduct-modal2 {
+    background-color: rgb(29, 248, 29);
+    color: rgb(206, 206, 206);
+    line-height: 4rem;
+    width: 50%;
+    border-radius: 10px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: 1s farzad22;
+}
+
+@keyframes farzad22 {
+    0% {
+        top: -100px;
+    }
+
+    100% {
+        top: 30%;
+    }
+}
+
+/* /////////////// delete products ///////////////////// */
+.deleteOne {
+    border-radius: 5px;
+    padding: .5rem 1rem;
+    margin-top: 1rem;
+}
+
+.deleteAll {
+    border-radius: 5px;
+}
+
+.deleteOne-container {
+    align-items: flex-end;
+}
+
+.danger {
+    width: 10px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgb(255, 0, 0);
+    padding-left: 0;
+}
+
+.p-danger {
+    padding-right: .3rem;
+}
+
+.hr2 {
+    width: 40rem;
+}
+
+/* ////////////////////// modal deleteOne /////////////// */
+.modal-deleteOne-parent {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: none;
+}
+
+.modal-deleteOne {
+    background-color: #eee;
+    width: 50%;
+    border-radius: 10px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    padding: 1rem 0 2.5rem 0;
+    transform: translate(-50%, -50%);
+    animation: 1s farzad2;
+}
+
+@keyframes farzad2 {
+    0% {
+        left: -100px;
+    }
+
+    100% {
+        top: 30%;
+    }
+}
+
+.X4 {
+    display: flex;
+    justify-content: start;
+    margin: 0 .75rem;
+    color: #212529;
+    font-size: 2rem;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+}
+
+/* ////////////////////// modal deleteOne2 /////////////// */
+.modal-deleteOne-parent2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: none;
+}
+
+.modal-deleteOne2 {
+    background-color: #eee;
+    width: 50%;
+    border-radius: 10px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    padding: 1rem 0 2.5rem 0;
+    transform: translate(-50%, -50%);
+    animation: 1s farzad3;
+}
+
+@keyframes farzad3 {
+    0% {
+        left: -100px;
+    }
+
+    100% {
+        top: 30%;
+    }
+}
+
+.X5 {
+    display: flex;
+    justify-content: start;
+    margin: 0 .75rem;
+    color: #212529;
+    font-size: 2rem;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+}
+
+/* /////////////////////////////// */
+.X3 {
+    display: flex;
+    justify-content: start;
+    margin: 0 .75rem;
+    color: #eee;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* ////////////// anbar list////////////////// */
+
+.anbar-liet {
+    width: 14.5rem;
+    height: 20rem;
+    background-color: #eee;
+    color: black;
+    margin-top: .5rem;
+    line-height: .5rem;
+    padding: 1rem 1rem;
+    overflow-y: auto;
+}
+
+.ol-list :nth-child(even) {
+    background-color: rgb(218, 216, 216);
+}
+
+li ::marker {
+    margin: 0;
+}
+
+.list-container {
+    overflow-y: auto;
+}
+
+.list-allNames {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-toList {
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 0 .65rem;
+}
+
+.remov-thanList {
+    font-size: 1.75rem;
+    color: red;
+    cursor: pointer;
+}
+
+
+/* ///////////////////  header  ////////////////////////// */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #eee;
+    padding: 1rem;
+    filter: drop-shadow(5px 5px 10px #575757);
+    font-weight: "Vazir", Arial, Helvetica, sans-serif;
+}
+
+.header-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.navbar-profile {
+    width: 3rem;
+}
+
+.header-btns {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media only screen and (max-width: 48em) {
+    .header {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1.5rem;
+    }
+}
+
+.controlpanel-navbarimg-count {
+    width: 4rem;
+    height: 3rem;
+}
+
+/* //////////////// dark mood    ///////////////////////////////// */
+
+.switch {
+    width: 60px;
+    height: 30px;
+    background-color: rgb(68, 68, 68);
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.flicker {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    transition: .5s;
+    box-shadow: inset 4px 4px 4px rgb(255, 255, 255),
+        inset -4px -4px 4px rgb(195 193 198 / 90%);
+}
+
+.moon {
+    width: 18px;
+    height: 18px;
+    border-radius: 10px;
+    position: absolute;
+    box-shadow: 4px 4px 0 0 rgb(255, 255, 255);
+    top: 0;
+    left: 30px;
+}
+
+.sun {
+    font-size: 1.2rem;
+    color: #fd7e14;
+    position: absolute;
+    top: 2px;
+    left: 7px;
+    display: none;
+}
+
+/* /////////////////////////////  dark ELEMENTS ///////////////// */
+
+.dark {
+    background-color: rgb(80, 80, 80);
+    transition: .5s;
+}
+
+.dark>* {
+    color: #eee;
+
+}
+
+.dark .flicker {
+    transform: translateX(30px);
+    background-color: rgb(75, 75, 75);
+    box-shadow: none;
+}
+
+.dark .header {
+    color: #eee;
+    background-color: #3d3d3d;
+    filter: drop-shadow(1px 1px 5px #ffffff);
+    border: .5px solid #eee;
+}
+
+.dark .card {
+    color: #eee;
+    background-color: #3d3d3d;
+    border: .5px solid #eee;
+    filter: drop-shadow(1px 1px 5px #ffffff);
+}
+
+.dark .list-group-flush li {
+    color: #eee;
+    background-color: #3d3d3d;
+    border-bottom: .5px solid #eee;
+
+}
+
+
+/* .dark a {
+    color: rgb(245, 0, 0);
+} */
+
+
+/* .dark .X2,
+.dark .X,
+.dark .modal2,
+.dark .modal {
+    color: #eee;
+    background-color: #3d3d3d;
+} */
+
+.dark .sun {
+    display: block;
+    color: #fd7e14;
+}
+
+.dark .switch {
+    color: #3d3d3d;
+    background-color: white;
+}
+
+.dark .content {
+    color: #eee;
+    background-color: #3d3d3d;
+    filter: drop-shadow(1px 1px 5px #ffffff);
+    border: .5px solid #eee;
+}
+
+.dark .nav-link {
+    color: #eee;
+}
+
+.dark .product-item {
+    filter: drop-shadow(2px 2px 5px #ffffff);
+    background-color: #3d3d3d;
+}
+
+.dark .product-statistics {
+    background-color: rgb(80, 80, 80);
+}
+
+.dark .products-font {
+    color: #eee;
+}
+
+.dark .product-title-section {
+    color: #eee;
+    background-color: #3d3d3d;
+}
+
+.dark .modal-content {
+    color: #eee;
+    background-color: #3d3d3d;
+}
+
+.dark .modal-content .card {
+    filter: none;
+}
+
+.dark .not-received-modal {
+    color: #212529;
+}
+
+/* ////////////////////// manager-card /////////////////////////// */
+
+.manager-card {
+    filter: drop-shadow(5px 5px 5px #575757);
+}
+
+.card-img-top {
+    height: 10rem;
+    width: 100%;
+}
+
+.card-profile {
+    position: absolute;
+    top: 8rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card-profile::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 116%;
+    height: 115%;
+    transform: translate(-7%, -7%);
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.card-img-profile {
+    width: 4rem;
+    height: 5rem;
+}
+
+
+/* ////////////// left section ////////////////////////// */
+
+.content {
+    background-color: #fff;
+    filter: drop-shadow(5px 5px 5px #575757);
+    height: 32rem;
+}
+
+.nav-tabs .nav-link {
+    margin-bottom: -1px;
+    background: 0 0;
+    border: 3px solid transparent;
+    border-top-right-radius: .35rem;
+    border-top-left-radius: .35rem;
+}
+
+/* /////////////////////////////////////////////////////////////// */
+/* ////////////// PRODUCTS SECTION  ////////////////////////////// */
+
+/* /////////////// type  &  category ///////////////////////////// */
+.product-category,
+.typeSelect {
+    width: 48%;
+}
+
+/* ///////       products-container       //////// */
+
+.content__wrapper {
+    position: relative;
+    height: 100%;
+}
+
+.products-container {
+    height: 79%;
+    overflow-y: auto;
+}
+
+.product-item {
+    display: flex;
+    position: relative;
+    filter: drop-shadow(2px 2px 5px #575757);
+}
+
+.discount-box {
+    background-color: #d17804;
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    top: .5rem;
+    left: 0;
+    width: 2.4rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-45deg);
+    transition: all .4s;
+}
+
+.product-item:hover .discount-box {
+    transform: rotate(0) scale(1.1);
+}
+
+.product-title-section {
+    height: 43%;
+    background-color: #f8f8f8;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+.product-statistics {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 1rem; */
+    padding-right: .7rem;
+    min-height: 55%;
+    background-color: #eee;
+}
+
+.product-img {
+    width: 10rem;
+    height: 8rem;
+}
+
+.products-number {
+    display: flex;
+    gap: 1.3rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* .productNum {
+    برای نمایش شماره هر محصول در ادمین
+    font-size: .5rem;
+    border-bottom: 1px solid rgb(41, 41, 41);
+    padding: 2px;
+} */
+
+.products-font {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.quest {
+    color: #949494;
+}
+
+/* /////  not received modal admin current ///////////////// */
+
+.not-received-modal {
+    width: 22rem;
+    height: 10rem;
+    background-color: #eee;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin: auto;
+}
+
+.not-received-modalParent {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    text-align: center;
+    padding-top: 5rem;
+    background: rgba(0, 0, 0, .95);
+    display: none;
+}
+
+/* ///////////////////     enteghadat */
+#analis-tab-pane {
+    font-family: "Vazir", Arial, Helvetica, sans-serif;
+}
+
+.commaent-closed {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .7rem;
+}
+
+.enteghad-card {
+    background-color: #eee;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.delete-enteghad {
+    border: none;
+    font-size: 2rem;
+    color: rgb(228, 6, 6);
+}
+
+.dark .delete-enteghad {
+    border: none;
+    background-color: #3d3d3d;
+    color: rgb(228, 6, 6);
+}
+
+/* /////////////////////////////// */

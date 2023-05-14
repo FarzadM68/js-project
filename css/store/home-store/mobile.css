@@ -1,0 +1,17 @@
+@media (max-width:444px) {
+
+    .nav-1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .title {
+        font-size: 3rem;
+    }
+
+
+}
+  
+
+
+

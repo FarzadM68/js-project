@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
+
+    <link rel="shortcut icon" href="/image/store/store/farzaed logo/logo-design-portfolio-farzad.jpg"
+        type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../css/admin/manager/admin-info.css">
+    <!-- <link rel="stylesheet" href="./css/admin/manager/admin-article.css"> -->
+    <link rel="stylesheet" href="../../css/admin/manager/controlP.css">
+    <link rel="stylesheet" href="../../css/users.css/index.css">
+    <title>پنل کاربران </title>
+</head>
+
+
+<body>
+
+    <!-- ///////////// navbar ///////////////////// -->
+    <header class="container px-0">
+        <div class="header col-11 col-md-12 my-5 mx-auto">
+            <div class="header-info">
+                <div class="header-details">
+                    <div class="d-flex">
+                        <h5 class="header-name fw-bold"></h5>
+                        <h5 class="header-family fw-bold ms-1"></h5>
+                    </div>
+                    <p class="mb-0 header-email">farzadmohammadi368@gmail.com</p>
+                </div>
+            </div>
+            <div class="header-btns me-3">
+                <div class="me-3 store-icon">
+                    <a href="../../index.html">
+                        <i class="bi bi-shop"></i>
+                    </a>
+                </div>
+                <div class="position-relative">
+                    <a href="../store/baskrt.html" class="basket-icon">
+                        <i class="bi bi-basket me-3"></i>
+                        <span
+                            class="position-absolute top-0 end-50 translate-middle badge rounded-pill bg-success nav-store-count">
+                            <!-- 99+ -->
+                            <span class="visually-hidden">unread messages</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="">
+                    <div class="switch">
+                        <div class="moon"></div>
+                        <div class="flicker"></div>
+                        <div class="sun"><i class="bi bi-brightness-high fw-bold"></i></div>
+                    </div>
+                </div>
+                <div class="">
+                    <a type="button" href="../../index.html"
+                        class="text-light fw-bold btn btn-primary me-0 exit-from-controlP">
+                        <i class="bi bi-box-arrow-right fs-5 me-2"></i>
+                        خروج از پنل
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- /////////////////  user page sections  ///////// /////// -->
+    <div class="container col-12 col-md-9 content">
+        <!-- ///// TABS //////// -->
+        <div class="content__wrapper d-flex flex-column align-content-between">
+            <ul class="justify-content-around nav nav-tabs mb-3 pt-2" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <button class="nav-link  fw-bold" id="info-tab" data-bs-toggle="tab" data-bs-target="#info-tab-pane"
+                        type="button">اطلاعات</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link fw-bold" id="profile-tab" data-bs-toggle="tab"
+                        data-bs-target="#users-purchased" type="button">محصولات خریداری شده</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link fw-bold" id="contact-tab" data-bs-toggle="tab"
+                        data-bs-target="#tiket-tab-pane" type="button"> ثبت تیکت</button>
+                </li>
+            </ul>
+
+            <div class="products-container tab-content  p-1" id="myTabContent">
+                <div class="tab-content container" id="myTabContent">
+                    <div class="tab-pane fade admin-teem-info" id="info-tab-pane">
+                        <div class="admin-info">
+                            <div class="bg-info">
+                                <button class="infos-btn" data-bs-toggle="collapse" href="#multiCollapseExample1">
+                                    اطلاعات شما
+                                </button>
+                            </div>
+                            <div class="col">
+                                <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                    <div class="card-body d-flex pb-4">
+                                        <div class="infos-container admin-infos-container">
+                                            <div class="pe-2 col-6 mb-4">
+                                                <label class="ps-2" for="">نام</label>
+                                                <input type="text" class="form-control admin-name" required>
+                                            </div>
+                                            <div class="col-6">
+                                                <label class="ps-2" for="">نام خانوادگی</label>
+                                                <input type="text" class="form-control admin-family" required>
+                                            </div>
+                                            <div class="pe-2 col-6 mb-4">
+                                                <label class="ps-2" for="">نام کاربری</label>
+                                                <input type="text" class="form-control me-3 admin-username"
+                                                    placeholder="حداقل 8 کاراکتر"></input>
+                                            </div>
+                                            <div class="col-6">
+                                                <label class="ps-2 for="">ایمیل</label>
+                                                <input type=" email" class="form-control admin-email" required></input>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ms-3 mb-3">
+                                        <button type="button"
+                                            class="btn btn-outline-danger openModal-change-adminInfo-btn">
+                                            تغییر اطلاعات
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Purchased products -->
+                <div class="product-list product-wrapper tab-pane fade w-75 mx-auto" id="users-purchased">
+                    <div class="users-purchased-section">
+                        <h3 class="no-purchase">تاکنون خریدی نداشته اید .</h3>
+                        <div class="card purchase-card">
+                            <div class="card-body py-0">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">ردیف</th>
+                                            <th colspan="2" scope="col">نام کالا</th>
+                                            <th colspan="2" scope="col">قیمت کالا</th>
+                                            <th colspan="2" scope="col"> تعداد</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="tbody">
+                                        <!-- <tr>
+                                            <th scope="row">1</th>
+                                            <td colspan="2">کاغذدیواری</td>
+                                            <td colspan="2">100</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td colspan="2">پارکت</td>
+                                            <td colspan="2">200</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td colspan="2">سقف کاذب</td>
+                                            <td colspan="2">250</td>
+                                        </tr> -->
+                                    </tbody>
+                                </table>
+                                <div class="purchas-infos">
+                                    <!-- <div class="d-flex">
+                                        <p>مجموع پرداختی :</p>
+                                        <p>200 تومان</p>
+                                    </div>
+                                    <div class="d-flex">
+                                        <p>تاریخ :</p>
+                                        <p>22/بهمن/57</p>
+                                    </div>
+                                    <div class="d-flex">
+                                        <p>کد پیگیری :</p>
+                                        <p> 5988 </p>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="product-list product-wrapper tab-pane fade w-75 mx-auto" id="tiket-tab-pane">
+                    <div class="container">
+                        <input type="text" class="form-control tiket-title my-4" placeholder="عنوان تیکت" required>
+                        <textarea class="form-control tiket-text" rows="3" placeholder="متن پیام"
+                            required=""></textarea>
+                        <button class="send-tiket">ارسال </button>
+                    </div>
+                    <div class="question-container mt-4">
+                        <!--<div class="question-section mt-3">
+                            <div class="question-header">
+                                <i class="bi bi-check-circle text-success"></i>
+                                <button class="infos-btn question-header" data-bs-toggle="collapse" href="#question">
+                                    موضوع تیکت
+                                </button>
+                            </div>
+                            <div class="collapse multi-collapse" id="question">
+                                <div class="user-question">
+                                    <h6 class="m-0"> قسمت مربوط به سوال من</h6>
+                                </div>
+                                <div class="answer-section">
+                                    <h6 class="m-0"> مدیر سایت : <span>جواب پیام شما داده شد .</span></h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question-section mt-3">
+                            <div class="question-header">
+                                <i class="bi bi-hourglass-split text-warning"></i>
+                                <button class="infos-btn question-header" data-bs-toggle="collapse" href="#question">
+                                    موضوع تیکت
+                                </button>
+                            </div>
+                            <div class="collapse multi-collapse" id="question">
+                                <div class="not-answer-section">
+                                    <h6 class="m-0">پیام شما در حال بررسی میباشد. پس از بررسی لازم نتیجه به شما اعلام خواهد شد.</h6>
+                                </div>
+                            </div>
+                        </div> -->
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- change informations of users modal -->
+    <div class="password-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">تغییر رمز عبور</h1>
+                    <button type="button" class="btn-close Close-changeInfosX"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="ps-2"> برای انجام تغییرات لطفا رمز خود را وارد کنید :</h6>
+                    <input type="password" class="form-control previous-admin-password"></input>
+                    <hr>
+                    <div class="my-3">
+                        <label class="ps-2" for="">رمز جدید</label>
+                        <input type="password" class="form-control new-password-admin"
+                            placeholder="حداقل 8 کاراکتر"></input>
+                    </div>
+                    <div class="">
+                        <label class="ps-2" for="">تکرار رمز جدید</label>
+                        <input type="password" class="form-control repete-password-admin"></input>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary Close-changeInfos">بستن</button>
+                    <button type="button" class="btn btn-outline-success make-changes"> انجام تغییرات</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- /// Not received modal infoe  /// -->
+    <div class="not-received-modalParent">
+        <div class="not-received-modal">
+            <h4 class="fw-bold">متاسفانه اطلاعات شما یافت نشد ☹</h4>
+            <h5 class="my-3">لطفا دوباره وارد شوید .</h5>
+            <button class="btn btn-warning fw-bold">
+                <a href="./login-user.html">باشه</a>
+            </button>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <script src="../../js/users.js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+        </script>
+</body>

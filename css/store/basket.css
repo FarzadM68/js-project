@@ -1,0 +1,227 @@
+@font-face {
+    font-family: "Vazir";
+    src: url("../../fonts/Vazir.eot");
+    /* IE9 Compat Modes */
+    src: url("../../fonts/Vazir.eot?#iefix") format("embedded-opentype"),
+        /* IE6-IE8 */
+        url("../../fonts/Vazir.woff2") format("woff2"),
+        /* Super Modern Browsers */
+        url("../../fonts/Vazir.woff") format("woff"),
+        /* Pretty Modern Browsers */
+        url("../../fonts/Vazir.ttf") format("truetype");
+    /* Safari, Android, iOS */
+}
+
+html,
+body {
+    font-family: "Vazir", Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(56, 56, 56);
+}
+
+/* ///////////// basket-page-header ///////////////////// */
+.basket-page-header {
+    background-color: #2e637c;
+    color: #fff;
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+}
+
+.header-svg {
+    stroke: none;
+    fill: #2e637c;
+}
+
+.basket-header-content span {
+    color: #fd7e14;
+    font-weight: bold;
+}
+
+.basket-page-header img {
+    width: 6rem;
+}
+
+/* ///////////// dark-mood Elements /////////////////// */
+.dark .basket-page-header {
+    background-color: #051922;
+}
+
+
+.dark .header-svg {
+    stroke: none;
+    fill: #051922
+}
+
+.dark .table-body {
+    color: #eee;
+    background-color: #3d3d3d;
+    filter: drop-shadow(1px 1px 5px #ffffff);
+    border: .5px solid #eee;
+}
+
+/* ///////////////////////// */
+
+#section2 {
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+.quantity {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid #0d6efd;
+}
+
+#section2 .quantity .span1 {
+    width: 180px;
+    padding-right: 1rem;
+}
+
+#section2 .quantity .span2 {
+    width: 180px;
+    margin-left: 5rem;
+}
+
+#section2 .quantity .span3 {
+    width: 200px;
+}
+
+#section2 .add-product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #0d6efd;
+}
+
+#section2 .add-product .basket-img {
+    width: 80px;
+    height: 55px;
+    margin: .5rem;
+}
+
+#section2 .add-product .small-img {
+    /* display: flex;
+    flex-direction: row;
+    align-items: center; */
+    width: 25%;
+}
+
+#section2 .add-product .small-img .product-title {
+    font-weight: bold;
+}
+
+#section2 .add-product .delete {
+    width: 40%;
+    padding-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#section2 .add-product .delete .btn-del {
+    background-color: #f35e5e;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin-right: 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 2.5rem;
+}
+
+#section2 .add-product .delete .btn-del:hover {
+    background-color: #CC4C4C;
+}
+
+#section2 .add-product .delete .product-n {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #0d6efd;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 0;
+
+}
+
+#section2 .add-product .price {
+    display: flex;
+    align-items: center;
+    padding-right: 1.5rem;
+}
+
+#section2 .add-product .price .tomans {
+    font-weight: normal;
+    /* padding-right: 4rem; */
+}
+
+.discountBtn-section {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 4rem;
+    margin-left: 4rem;
+}
+
+.purchase {
+    display: flex;
+    justify-content: center;
+}
+
+.purchase button {
+    background-color: #fff;
+    color: #198754;
+    border: #198754 2px solid;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.purchase button:hover {
+    color: #fff;
+}
+
+/* ////////////////////////////// */
+.copenCode {
+    width: 24%;
+}
+
+.table-section {
+    display: flex;
+    justify-content: flex-end;
+    margin: 4rem;
+    margin-bottom: 2.5rem;
+}
+
+.table-body {
+    background-color: #eee;
+    filter: drop-shadow(5px 5px 5px);
+}
+
+tbody,
+td,
+tr {
+    border: #bcbcbc 1px solid;
+    padding: .5rem 3rem;
+}

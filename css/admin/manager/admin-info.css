@@ -1,0 +1,95 @@
+@font-face {
+    font-family: "Vazir";
+    src: url("../../../fonts/Vazir.eot");
+    /* IE9 Compat Modes */
+    src: url("../../../fonts/Vazir.eot?#iefix") format("embedded-opentype"),
+        /* IE6-IE8 */
+        url("../../../fonts/Vazir.woff2") format("woff2"),
+        /* Super Modern Browsers */
+        url("../../../fonts/Vazir.woff") format("woff"),
+        /* Pretty Modern Browsers */
+        url("../../../fonts/Vazir.ttf") format("truetype");
+    /* Safari, Android, iOS */
+}
+
+
+.admin-teem-info {
+    font-family: "Vazir", Arial, Helvetica, sans-serif;
+}
+
+.infos-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.infos-btn {
+    border: none;
+    background-color: #0dcaf0;
+    height: 2.5rem;
+    padding-right: .5rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.admin-info {
+    border: #c4c4c4 1px solid;
+    margin-bottom: 1rem;
+}
+
+/* ///////  addProfile-btn  ///////// */
+.addProfile-btn {
+    width: 7rem;
+    height: 2.5rem;
+    margin-top: 1.2rem;
+}
+
+/* ////// password-modal  ////////     */
+.password-modal {
+    font-family: "Vazir", Arial, Helvetica, sans-serif;
+    display: none;
+    position: absolute;
+    top: 200px;
+    right: 30%;
+}
+
+.admin-infos-container input {
+    border-bottom: 2px rgb(15, 199, 55) solid;
+}
+.admin-infos-container .select-profile {
+    border-bottom: 2px red solid;
+}
+.previous-admin-password {
+    border-bottom: 2px red solid;
+}
+/* // teem infos   /////////////////// */
+.teem-card {
+    width: 10rem;
+    border: #7e7e7e 1px solid;
+    margin: 4px;
+    text-align: center;
+    background-color: #eee;
+}
+
+.teem-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.add-new-person {
+    background-color: #585858;
+    border: none;
+    margin: 1rem 3rem;
+    padding: 7px;
+    color: #fff;
+    font-weight: bold;
+}
+.add-new-person:hover {
+    filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
+}
+
+#exampleModal,
+#exampleModalEdit{
+    font-family: "Vazir", Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'Vazir';
+    src: url('../../../fonts/Vazir.eot');
+    /* IE9 Compat Modes */
+    src: url('../../../fonts/Vazir.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../../../fonts/Vazir.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../../../fonts/Vazir.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../../../fonts/Vazir.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+}
+
+
+.articles-statistics {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: .7rem;
+    min-height: 38%;
+    background-color: #eee;
+}
+
+.article-title-section {
+    height: 55%;
+    background-color: #f8f8f8;
+}
+
+.article-item {
+    display: flex;
+    filter: drop-shadow(2px 2px 5px #575757);
+
+}
+
+.article-number {
+    display: flex;
+    /* gap: 1.3rem; */
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.add-newArticle-btn {
+    background-color: #009cf0;
+    color: white;
+    margin: 1.2rem;
+    font-weight: bold;
+    border: none;
+    padding: .5rem 6rem;
+    box-shadow: #009cf05d 0px 8px 24px;
+}
+
+.add-newArticle-btn:hover {
+    filter: drop-shadow(2px 2px 0px #000);
+}
+
+.tag-container,
+.edit-tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.tag-container p,
+.edit-tag-container p {
+    background-color: #12AD2B;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: .2rem;
+    padding-bottom: 0;
+    border-radius: 5px;
+    margin: .1rem .5rem;
+}
+
+.close-tag:hover {
+    cursor: pointer;
+    color: red;
+}
+
+.quest {
+    color: #12AD2B;
+}
+
+
+/* dark elems */
+.dark .article-item {
+    filter: drop-shadow(2px 2px 5px #fff);
+    background-color: #3d3d3d;
+}
+
+.dark .articles-statistics {
+    background-color: rgb(80, 80, 80);
+}
+
+.dark .article-title-section {
+    color: #eee;
+    background-color: #3d3d3d;
+}
+
+.dark .article-number {
+    color: #eee;
+}
+
+/* add modal */
+#exampleModalArticle,
+#exampleModalEditArticle {
+    font-family: "Vazir", Arial, Helvetica, sans-serif;
+}

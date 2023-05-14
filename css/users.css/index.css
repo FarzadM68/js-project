@@ -1,0 +1,136 @@
+.header .header-btns .position-relative i {
+    font-size: 2rem;
+    color: #fd7e14;
+}
+
+.store-icon i {
+    font-size: 2rem;
+    color: #fd7e14;
+}
+
+.header-email {
+    color: #6c757d;
+}
+
+.not-received-modalParent {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    text-align: center;
+    padding-top: 5rem;
+    background: rgba(0, 0, 0, .95);
+    display: none;
+}
+
+.dark .header .header-btns .position-relative i,
+.dark .store-icon i {
+    color: #5eff50;
+}
+
+.dark .header-email {
+    color: #d3d3d3;
+}
+
+#tiket-tab-pane {
+    font-family: "Vazir", Arial, Helvetica, sans-serif;
+}
+
+.tiket-title,
+.tiket-text {
+    border-bottom: red 3px solid;
+    z-index: 999;
+}
+
+.send-tiket {
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    width: 6rem;
+    height: 2.5rem;
+    margin-top: 1.5rem;
+}
+
+.question-section {
+    border: #c4c4c4 1px solid;
+    border-bottom: #c4c4c4 2px solid;
+    margin-bottom: 1rem;
+}
+
+.question-header {
+    background-color: #F5F5F5;
+    color: #fd7e14;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-right: 1rem;
+}
+
+.question-section i {
+    /* color: #41b300; */
+    font-size: 1.5rem;
+    margin-top: 7px;
+}
+
+.user-question {
+    background-color: #cff4fc;
+    margin: .75rem;
+    padding: .5rem;
+}
+
+.answer-section {
+    background-color: #d1e7dd;
+    margin: .75rem 2rem .75rem .75rem;
+    padding: .5rem;
+}
+.not-answer-section {
+    background-color: #cff4fc;
+    margin: .75rem;
+    padding: .5rem;
+}
+
+.dark .answer-section,
+.dark .not-answer-section {
+    color: black;
+}
+
+.bg-green {
+    background-color: #a6f1a0;
+}
+
+.bg-red {
+    background-color: rgb(255, 163, 163);
+}
+
+.purchas-infos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.purchase-card {
+    font-family: "Vazir", Arial, Helvetica, sans-serif;
+    border: black 1px solid;
+    margin-top: 1rem;
+    background-color: #eee;
+}
+
+.dark .purchase-card .table {
+    color: #fff;
+}
+
+.purchase-card tr:last-child {
+    border-bottom: rgb(128, 128, 128) 1px solid;
+}
+
+.no-purchase {
+    font-family: "Vazir", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-top: 2rem;
+    color: #fd7676;
+    display: none;
+}
+
+
+

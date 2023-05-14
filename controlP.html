@@ -1,0 +1,926 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
+
+        <link rel="shortcut icon" href="/image/store/store/farzaed logo/logo-design-portfolio-farzad.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/admin/manager/admin-info.css">
+    <link rel="stylesheet" href="./css/admin/manager/admin-article.css">
+    <link rel="stylesheet" href="./css/users.css/index.css">
+    <link rel="stylesheet" href="./css/admin/manager/user-admin.css">
+    <link rel="stylesheet" href="./css/admin/manager/controlP.css">
+    <title>پنل مدیریت </title>
+</head>
+
+<body>
+
+    <!-- ///////////// navbar ///////////////////// -->
+
+    <header class="container px-0">
+        <div class="header col-11 col-md-12 my-5 mx-auto">
+            <div class="header-info">
+                <img class="navbar-profile" src="" alt="پروفایل">
+                <div class="header-details">
+                    <div class="d-flex">
+                        <h5 class="header-name fw-bold"></h5>
+                        <h5 class="header-family fw-bold ms-1"></h5>
+                    </div>
+                    <p class="text-muted mb-0 header-email"></p>
+                </div>
+            </div>
+            <div class="header-btns me-3">
+                <div class="col-sm-3 position-relative">
+                    <img class="controlpanel-navbarimg-count" src="./image/control panel/فروشگاه.jpg" alt="...">
+                    <span
+                        class="position-absolute top-0 end-50 me-3 translate-middle badge rounded-pill bg-success nav-store-count">
+                        <!-- 99+ -->
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
+                </div>
+                <div class="col-sm-3">
+                    <div class="switch">
+                        <div class="moon"></div>
+                        <div class="flicker"></div>
+                        <div class="sun"><i class="bi bi-brightness-high fw-bold"></i></div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <a type="button" href="./pages/manager/login-admin.html"
+                        class="text-light fw-bold btn btn-primary me-0 exit-from-controlP">
+                        <i class="bi bi-box-arrow-right fs-5 me-2"></i>
+                        خروج از پنل
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- /////////////////////////// admin card  ////////////////////// -->
+    <div class="container">
+        <h4 class="fs-2 fw-bold my-3 text-center mb-5"> پنل مدیریت فروشگاه </h4>
+        <div class="row justify-content-between">
+            <div class="col-10 col-md-3 mb-4">
+                <section class="manager-card">
+                    <div class="card position-relative text-center">
+                        <img src="./image/control panel/img_1.png" class="card-img-top mb-2" alt="...">
+                        <div class="card-body text-center mt-5 mb-2">
+                            <p class="card-text text-muted card-email"></p>
+                        </div>
+                        <ul class="list-group list-group-flush text-center m-2 mb-0 pb-3">
+                            <li class="list-group-item fw-bold px-1">نام : <span
+                                    class="ms-1 text-primary card-name"></span>
+                            </li>
+                            <li class="list-group-item fw-bold px-1">نام خانوادگی : <span
+                                    class="ms-1 text-primary card-family"></span></li>
+                            <li class="list-group-item fw-bold px-1">تعداد محصولات فروشگاه : <span
+                                    class="ms-1 text-success fs-5 store-count-products"></span></li>
+                        </ul>
+                    </div>
+                    <div class="card-profile">
+                        <img class="card-img-profile" src="" alt="پروفایل">
+                    </div>
+                </section>
+            </div>
+
+            <!-- /////////////////  admin page sections  ///////// /////// -->
+            <div class="col-md-8 content">
+                <!-- ///// TABS //////// -->
+                <div class="content__wrapper d-flex flex-column align-content-between">
+                    <ul class="justify-content-between nav nav-tabs mb-3 pt-2" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <button class="nav-link  fw-bold" id="info-tab" data-bs-toggle="tab"
+                                data-bs-target="#info-tab-pane" type="button">اطلاعات</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link fw-bold" id="profile-tab" data-bs-toggle="tab"
+                                data-bs-target="#users-tab-pane" type="button">کاربران</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link fw-bold" id="contact-tab" data-bs-toggle="tab"
+                                data-bs-target="#products-tab-pane" type="button">محصولات</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link fw-bold" id="contact-tab" data-bs-toggle="tab"
+                                data-bs-target="#analis-tab-pane" type="button">انتقاد/ پیشنهاد</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link fw-bold" id="contact-tab" data-bs-toggle="tab"
+                                data-bs-target="#articles-tab-pane" type="button">مقالات</button>
+                        </li>
+                    </ul>
+
+                    <!-- admin & teem infos  -->
+                    <div class="products-container tab-content  p-1" id="myTabContent">
+                        <div class="tab-content container" id="myTabContent">
+                            <div class="tab-pane fade admin-teem-info" id="info-tab-pane">
+                                <div class="admin-info">
+                                    <div class="bg-info">
+                                        <button class="infos-btn" data-bs-toggle="collapse"
+                                            href="#multiCollapseExample1">
+                                            اطلاعات شما
+                                        </button>
+                                    </div>
+                                    <div class="col">
+                                        <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                            <div class="card-body d-flex pb-4">
+                                                <div class="infos-container admin-infos-container">
+                                                    <div class="pe-2 col-6 mb-4">
+                                                        <label class="ps-2" for="">نام</label>
+                                                        <input type="text" class="form-control admin-name" required>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <label class="ps-2" for="">نام خانوادگی</label>
+                                                        <input type="text" class="form-control admin-family" required>
+                                                    </div>
+                                                    <div class="pe-2 col-6 mb-4">
+                                                        <label class="ps-2" for="">نام کاربری</label>
+                                                        <input type="text" class="form-control me-3 admin-username"
+                                                            placeholder="حداقل 8 کاراکتر"></input>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <label class="ps-2 for="">ایمیل</label>
+                                                        <input type=" email" class="form-control admin-email"
+                                                            required></input>
+                                                    </div>
+                                                    <div class="my-3 d-flex">
+                                                        <div class="me-3">
+                                                            <label class="ps-2" for="">انتخاب پروفایل</label>
+                                                            <input type="file" class="form-control select-profile"
+                                                                id="inputGroupFile01">
+                                                        </div>
+                                                        <button class="btn btn-primary addProfile-btn p-0 px-sm-3">ثبت
+                                                            پروفایل</button>
+                                                    </div>
+                                                    <div class="mt-5">
+                                                        <button type="button"
+                                                            class="btn btn-outline-danger openModal-change-adminInfo-btn">
+                                                            تغییر اطلاعات
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="teem-info">
+                                    <div class="teem-info">
+                                        <div class="bg-info">
+                                            <button class="infos-btn" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#multiCollapseExample2" aria-expanded="true">
+                                                اطلاعات تیم
+                                            </button>
+                                        </div>
+                                        <div class="col">
+                                            <div class="collapse multi-collapse" id="multiCollapseExample2">
+                                                <div class="card card-body px-0 card-teem-parent">
+                                                    <div class="teem-container">
+                                                        <!-- <div class="card teem-card">
+                                                            <img src="../../photo_2022-09-05_18-06-35.jpg" class="card-img-top p-2" alt="...">
+                                                            <div class="card-body p-1">
+                                                                <h6>نام و نام خانوادگی </h6>
+                                                                <h6 class="my-3"> نصاب پارکت</h6>
+                                                                <button class="btn btn-primary edit-teem-person-btn">ویرایش</button>
+                                                                <button class="btn btn-warning edit-teem-person-btn">حذف</button>
+                                                            </div>
+                                                        </div> -->
+                                                    </div>
+                                                    <button type="button" class="add-new-person" data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal">
+                                                        افزودن عضو جدید
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end admin & teem infos  -->
+
+                        <!-- users infos -->
+
+                        <div class="tab-pane fade" id="users-tab-pane">
+                            <div class="container mt-4">
+                                <label class="mb-2 ms-2">جستجوی کاربران</label>
+                                <input type="text" class="form-control find-users" placeholder="نام و یا ایمیل کاربر را وارد کنید"
+                                    required></input>
+                            </div>
+                            <div class="users-cards mt-4">
+                                <div class="users-cards-container container">
+                                    <!-- <div class="card mt-4">
+                                        <div class="card-body">
+                                            <h5 class="card-title mb-3">فرزاد محمدی </h5>
+                                            <h6 class="card-subtitle mb-2">farzadmohammadi368@gmail.com</h6>
+                                            <div class="d-flex mt-3">
+                                                <button class="btn btn-secondary">پیامها</button>
+                                                <button class="btn btn-primary mx-4">اطلاعات</button>
+                                                <button class="btn btn-danger">حذف</button>
+                                            </div>
+                                        </div>
+                                    </div>-->
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- products card  -->
+                        <div class="product-list product-wrapper tab-pane fade" id="products-tab-pane">
+                            <!-- <div class="product-item mb-4">
+                                <img class="product-img img-fluid" src="./image/products/آجرنسوز.jpg" alt="...">
+                                <div class="product-Description w-100">
+                                    <div class="product-title-section p-3">
+                                        <h5 class="fw-bold"> <span class="productNum">1</span> آجرنسوز</h5>
+                                    </div>
+                                    <div class="product-statistics">
+                                        <div class="products-number">
+                                            <div>
+                                                <span class="products-font">قیمت :</span>
+                                                <span class="products-font">100</span>
+                                            </div>
+                                            <div>
+                                                <span class="products-font">دسته : </span>
+                                                <span class="products-font">دیواری</span>
+                                            </div>
+                                            <div>
+                                                <span class="products-font">فروش :</span>
+                                                <span class="products-font">20</span>
+                                                <span class="products-font">متر </span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-info fw-bold py-1">ویرایش</button>
+                                            <button class="btn btn-danger fw-bold py-1">حـذ‌‌‌‌‌ف</button>
+                                        </div>
+                                    </div>
+                                    <div class="discount-box">
+                                        <p class="m-0">%10</p>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                        <!-- end products card  -->
+
+
+                        <!-- enteghadat -->
+                        <div class="tab-pane fade" id="analis-tab-pane">
+                            <div class="enteghad-container">
+                                <!-- <div class="card enteghad-card" style="width: 99%;">
+                                    <div class="card-body pb-1">
+                                        <div class="commaent-closed">
+                                            <h6 class="card-title fw-bold">تنوع محصولات</h6>
+                                            <button class="delete-enteghad">&times;</button>
+                                        </div>
+                                        <p class="card-text"> انتقادات و پیشنهادات</p>
+                                        <hr>
+                                        <div class="text-muted">
+                                            <span>فرزاد محمدی</span>
+                                            <span>farzadmohammadi368@gmail.com</span>
+                                            <span class="mx-4">09338752121</span>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                        <!-- end enteghad -->
+
+
+                        <!-- article section -->
+                        <div class="articles-wrapper tab-pane fade text-center" id="articles-tab-pane">
+                            <button class="add-newArticle-btn" data-bs-toggle="modal"
+                                data-bs-target="#exampleModalArticle">
+                                افزودن مقاله جدید
+                            </button>
+                            <div class="article-container">
+                                <!-- <div class="article-item mb-4">
+                                    <img class="product-img img-fluid" src="./image/store/store/login.jpg" alt="...">
+                                    <div class="product-Description w-100">
+                                        <div class="article-title-section p-3 text-start">
+                                            <h5 class="fw-bold"> مقاله 1</h5>
+                                            <p class="fw-bold">مقاله مقاله مقاله</p>
+                                        </div>
+                                        <div class="articles-statistics">
+                                            <div class="products-number">
+                                                <div>
+                                                    <span class="products-font">بازدید :</span>
+                                                    <span class="products-font">20</span>
+                                                    <i class="bi bi-person fs-5"></i>
+                                                </div>
+                                                <div>
+                                                    <span class="products-font">تاریخ انتشار :</span>
+                                                    <span class="products-font">0000000</span>                            
+                                                </div>
+                                            </div>
+                                            <div class="m-auto">
+                                                <button class="btn btn-info fw-bold py-1">ویرایش</button>
+                                                <button class="btn btn-danger fw-bold py-1">حـذ‌‌‌‌‌ف</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                        <!-- end article section -->
+
+                    </div>
+
+
+                    <!-- ///// all products add btns ///// -->
+                    <div class="my-1 text-end">
+                        <button type="button" class="btn btn-primary fw-bold openModal-addProduct-btn"
+                            data-bs-toggle="modal" data-bs-target="#staticBackdrop"> افزودن محصول جدید</button>
+                        <button class="btn btn-warning fw-bold text-secondary px-3 mx-2">اعمال تخفیف همه
+                            محصولات</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- ///////////////////////////////////////////// -->
+    <!-- modals  -->
+
+
+    <!--add articles Modal -->
+    <div class="modal fade" id="exampleModalArticle">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"> مقاله جدید </h1>
+                    <button type="button" class="btn-close close-article-modal2" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex mb-4">
+                        <input type="text" class="form-control me-2 new-article-name" placeholder="عنوان مقاله">
+                        <input type="text" class="form-control new-article-writer" placeholder="نام نویسنده">
+                    </div>
+                    <div class="d-flex mb-4">
+                        <div class="col-6 me-2">
+                            <label class="ps-3" for=""> عکس مقاله</label>
+                            <input type="file" class="form-control new-article-img">
+                        </div>
+                        <div class="col-6">
+                            <label class="ps-3" for="">تاریخ انتشار</label>
+                            <div class="input-group flex-nowrap mb-4">
+                                <span class="input-group-text" id="addon-wrapping"><i
+                                        class="bi bi-calendar2-check"></i></span>
+                                <input type="text" class="form-control new-article-date" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group flex-nowrap mb-3">
+                        <span class="input-group-text" id="addon-wrapping">
+                            <i class="bi bi-tags"></i>
+                        </span>
+                        <input type="text" class="form-control new-article-tags"
+                            placeholder="تگ مربوطه را وارد کرده سپس دکمه Enter را فشار دهید .">
+                    </div>
+                    <div class="tag-container"></div>
+                    <textarea class="form-control new-article-description mb-4" rows="2" placeholder="تیتر مقاله"
+                        required=""></textarea>
+                    <textarea class="form-control new-article-text" rows="5" placeholder="متن مقاله"
+                        required=""></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary close-article-modal"
+                        data-bs-dismiss="modal">بستن</button>
+                    <button type="button" class="btn btn-primary create-new-article">افزودن </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- edit article modal -->
+    <div class="modal fade" id="exampleModalEditArticle">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"> ویرایش مقاله </h1>
+                    <button type="button" class="btn-close close-edit-article-modal2" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex mb-4">
+                        <input type="text" class="form-control me-2 edit-article-name" placeholder="عنوان مقاله">
+                        <input type="text" class="form-control edit-article-writer" placeholder="نام نویسنده">
+                    </div>
+                    <div class="d-flex mb-4">
+                        <div class="col-6 me-2">
+                            <label class="ps-3" for=""> عکس مقاله</label>
+                            <input type="file" class="form-control edit-article-img">
+                        </div>
+                        <div class="col-6">
+                            <label class="ps-3" for="">تاریخ انتشار</label>
+                            <div class="input-group flex-nowrap mb-4">
+                                <span class="input-group-text" id="addon-wrapping"><i
+                                        class="bi bi-calendar2-check"></i></span>
+                                <input type="text" class="form-control edit-article-date" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group flex-nowrap mb-3">
+                        <span class="input-group-text" id="addon-wrapping">
+                            <i class="bi bi-tags"></i>
+                        </span>
+                        <input type="text" class="form-control edit-article-tags"
+                            placeholder="تگ مربوطه را وارد کرده سپس دکمه Enter را فشار دهید .">
+                    </div>
+                    <div class="edit-tag-container"></div>
+                    <textarea class="form-control edit-article-description mb-4" rows="2" placeholder="تیتر مقاله"
+                        required=""></textarea>
+                    <textarea class="form-control edit-article-text" rows="5" placeholder="متن مقاله"
+                        required=""></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary close-edit-article-modal"
+                        data-bs-dismiss="modal">بستن</button>
+                    <button type="button" class="btn btn-primary create-edit-article">انجام تغییرات </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- change informations of admins modals -->
+    <div class="password-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">تغییر رمز عبور</h1>
+                    <button type="button" class="btn-close Close-changeInfosX"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="ps-2"> برای انجام تغییرات لطفا رمز خود را وارد کنید :</h6>
+                    <input type="password" class="form-control previous-admin-password"></input>
+                    <hr>
+                    <div class="my-3">
+                        <label class="ps-2" for="">رمز جدید</label>
+                        <input type="password" class="form-control new-password-admin"
+                            placeholder="حداقل 8 کاراکتر"></input>
+                    </div>
+                    <div class="">
+                        <label class="ps-2" for="">تکرار رمز جدید</label>
+                        <input type="password" class="form-control repete-password-admin"></input>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary Close-changeInfos">بستن</button>
+                    <button type="button" class="btn btn-outline-success make-changes"> انجام تغییرات</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- add new person modal -->
+    <div class="modal fade" id="exampleModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">لطفا مشخصات فرد جدید را وارد کنید .</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control new-person-name" placeholder="نام و نام خانوادگی">
+                    <input type="text" class="form-control new-person-job my-4" placeholder="مسئولیت ">
+                    <label class="ps-3" for="">انتخاب عکس</label>
+                    <input type="file" class="form-control new-person-img mb-4">
+                    <textarea class="form-control new-person-description" name="" id="" rows="5"
+                        placeholder="توضیح مختصر" required=""></textarea>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">انصراف</button>
+                    <button type="button" class="btn btn-primary save-newPerson-infos">ذخیره اطلاعات </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- edit person modal -->
+    <div class="modal fade" id="exampleModalEdit">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">برای ویرایش اطلاعات تمام موارد خواسته شده را
+                        پرکنید .</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control edit-person-name" placeholder="نام و نام خانوادگی">
+                    <input type="text" class="form-control edit-person-job my-4" placeholder="مسئولیت ">
+                    <label class="ps-3" for="">انتخاب عکس</label>
+                    <input type="file" class="form-control edit-person-img mb-4">
+                    <textarea class="form-control edit-person-description" name="" id="" rows="5"
+                        placeholder="توضیح مختصر" required=""></textarea>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">انصراف</button>
+                    <button type="button" class="btn btn-primary save-editPerson-infos">ویرایش اطلاعات </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- /// Not received modal infoe  /// -->
+    <div class="not-received-modalParent">
+        <div class="not-received-modal">
+            <h4 class="fw-bold">متاسفانه اطلاعات شما یافت نشد ☹</h4>
+            <h5 class="my-3">لطفا دوباره وارد شوید .</h5>
+            <button class="btn btn-warning fw-bold">
+                <a href="./pages/manager/login-admin.html">باشه</a>
+            </button>
+        </div>
+    </div>
+
+    <!-- //////////////  Modal add product admin ///////////////////-->
+
+    <div class="modal fade addProduct-modal" id="staticBackdrop">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="exampleModalLabel"> برای اضافه کردن محصول به فروشگاه لطفا تمام
+                        موارد خواسته شده را با دقت پر کنید. </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label"> عنوان کالا</label>
+                            <input type="text" class="form-control objectTitle"></input>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label"> قیمت کالا</label>
+                            <input type="text" class="form-control objectPrice"></input>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label">تصویر کالا</label>
+                            <input type="file" name="" id="product-img"
+                                class="objectImg form-control form__input form-input-product-img" min="1" required="">
+                        </div>
+                        <div class="d-flex">
+                            <select class="typeSelect form-select form-select-md mb-3 me-4">
+                                <option value="لطفا واحد کالا را وارد کنید">لطفا واحد کالا را انتخاب کنید</option>
+                                <option>هر متر مربع</option>
+                                <option>دونه ای</option>
+                                <option>هر متر طول</option>
+                                <option>هر رول</option>
+                            </select>
+                            <select class="product-category typeSelect form-select form-select-md mb-3">
+                                <option value="دسته بندی محصول">دسته بندی محصول</option>
+                                <option>دیواری</option>
+                                <option>سقفی</option>
+                                <option>زمینی</option>
+                                <option>عمومی</option>
+                            </select>
+                        </div>
+                        <div class="disCount-container my-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false"
+                                    aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                <label class="form-check-label fw-bold" for="flexCheckDefault">اعمال تخفیف </label>
+                            </div>
+                            <div class="collapse multi-collapse collapse-checkbox-new-product"
+                                id="multiCollapseExample2">
+                                <div class="card card-body">
+                                    <div class="d-flex">
+                                        <input type="number" class="form-control me-2 fw-bold discount-value" min="0"
+                                            placeholder="درصد تخفیف"></input>
+                                        <input type="text" class="form-control fw-bold copen-code"
+                                            placeholder="کد تخفیف"></input>
+                                    </div>
+                                </div>
+                            </div>
+                            <textarea class="form-control form__input mt-4 description-input" name="" id="" rows="5"
+                                placeholder=" توضیح کوتاه محصول" required=""></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger fw-bold" data-bs-dismiss="modal">بستن</button>
+                    <button type="button" class="btn btn-success fw-bold objectBtn">اضافه کردن کالا به فروشگاه</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- //////////////  Modal Edit product admin ///////////////////-->
+
+    <div class="modal fade addProduct-modal" id="staticBackdrop2">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-edit-title fw-bold text-warning" id="exampleModalLabel"> ویرایش محصول </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label"> عنوان کالا</label>
+                            <input type="text" class="form-control product-edit-title"></input>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label"> قیمت کالا</label>
+                            <input type="text" class="form-control product-edit-price"></input>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label">تصویر کالا</label>
+                            <input type="file" name="" id="product-img"
+                                class="product-edit-img form-control form__input form-input-product-img" min="1"
+                                required="">
+                        </div>
+                        <div class="d-flex">
+                            <select class="product-edit-type form-select form-select-md mb-3 me-4">
+                                <option value="لطفا واحد کالا را وارد کنید">لطفا واحد کالا را انتخاب کنید</option>
+                                <option>هر متر مربع</option>
+                                <option>دونه ای</option>
+                                <option>هر متر طول</option>
+                                <option>هر رول</option>
+                            </select>
+                            <select class="product-edit-category form-select form-select-md mb-3">
+                                <option value="دسته بندی محصول">دسته بندی محصول</option>
+                                <option>دیواری</option>
+                                <option>سقفی</option>
+                                <option>زمینی</option>
+                                <option>عمومی</option>
+                            </select>
+                        </div>
+                        <div class="edit-disCount-container my-3">
+                            <div class="form-check">
+                                <input class="form-check-input edit-form-check-input" type="checkbox" value=""
+                                    id="flexCheckDefault" data-bs-toggle="collapse" data-bs-target=".multi-collapse2"
+                                    aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">
+                                <label class="form-check-label fw-bold" for="flexCheckDefault">اعمال تخفیف </label>
+                            </div>
+                            <div class="collapse multi-collapse2 edit-collaps-section" id="multiCollapseExample2">
+                                <div class="card card-body">
+                                    <div class="d-flex">
+                                        <input type="number" class="form-control me-2 fw-bold edit-discount-value"
+                                            min="0" placeholder="درصد تخفیف"></input>
+                                        <input type="text" class="form-control fw-bold edit-copen-code"
+                                            placeholder="کد تخفیف"></input>
+                                    </div>
+                                </div>
+                            </div>
+                            <textarea class="form-control form__input mt-4 edit-description-input" name="" id=""
+                                rows="5" placeholder=" توضیح کوتاه محصول" required=""></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger fw-bold" data-bs-dismiss="modal">بستن</button>
+                    <button type="button" class="btn btn-success fw-bold btn-edit-info-product"> ثبت </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- /////////////////////////////////////////////// -->
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4 list-container">
+                <div class="row col-md-12">
+                    <div class="d-flex">
+                        <p class="fw-bold">تعداد کالاهای موجود در انبار :</p>
+                        <span class="text-success fw-bold fs-5 ms-1 anbar-count"></span>
+                    </div>
+
+                    <div class="d-flex">
+                        <div class="col-sm-8 pe-0">
+                            <input type="text" class="form-control anbar-input"></input>
+                        </div>
+                        <div class="col-sm-2 ms-3">
+                            <button class="btn btn-primary add-toList">+</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="anbar-liet ps-0">
+                            <ol class="ol-list">
+                                <!-- <div class="list-allNames">
+                                    <li class="m-0 py-2 px-1">کاغذ دیواری</li>
+                                    <span class="remov-thanList">&times;</span>
+                                </div> -->
+                            </ol>
+                        </div>
+                        <button class="btn btn-danger px-3 format-list mt-2 fw-bold">فرمت لیست</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-8">
+                <div>
+                    <h2 class="py-4 fw-bold text-center">حذف محصولات از فروشگاه </h2>
+                    <div class="row deleteOne-container mb-5">
+                        <div class="col-sm-10">
+                            <label class="form-label fw-bold py-2 ps-2">برای حذف یک کالا از فروشگاه عنوان آنرا وارد کرده
+                                سپس دکمه حذف را فشار دهید. </label>
+                            <input type="text" class="inputDelete-oneP form-control fs-5"></input>
+                        </div>
+                        <div class="col-sm-2">
+                            <button class="deleteOne btn-danger fw-bold">حـذ‌‌‌‌‌ف</button>
+                        </div>
+                    </div>
+                    <hr class="hr2">
+                    <div>
+                        <div class="danger-section d-flex col-sm-10 mt-5 mb-2 ms-1">
+                            <div class="mt-1 danger">
+                            </div>
+                            <div class="p-danger">
+                                <p class="fw-bold">اخطار!! در صورت انتخاب این دکمه تمامی محصولات از صفحه فروشگاه پاک
+                                    میشود.</p>
+                            </div>
+                        </div>
+                        <button class="deleteAll btn-danger p-2 ms-3 fw-bold">حذف تمامی محصولات از لیست شرکت</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+
+    <!-- users infoes Modal -->
+    <div class="modal fade" id="usersInfoes">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="usersInfoesLabel">اطلاعات کاربر مورد نظر </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body ">
+                    <label class="ms-3" for="">نام </label>
+                    <input type="text" class="form-control users-name" readonly>
+                    <label class="ms-3 mt-4" for="">نام خانوادگی </label>
+                    <input type="text" class="form-control users-family" readonly>
+                    <label class="ms-3 mt-4" for="">ایمیل </label>
+                    <input type="text" class="form-control users-email" readonly>
+                    <label class="ms-3 mt-4" for=""> نام کاربری </label>
+                    <input type="text" class="form-control users-username" readonly>
+                    <label class="ms-3 mt-4" for=""> رمز جاری </label>
+                    <input type="text" class="form-control users-password" readonly>
+                    <label class="ms-3 mt-4" for=""> تعداد محصولات خریداری شده </label>
+                    <input type="text" class="form-control users-purches mb-3" readonly>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end users infoes Modal -->
+
+    <!-- users tikets modal -->
+    <div class="modal fade" id="usersTikets">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="usersTiketsLabel">تیکت ها </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="collapse" id="answerInput">
+                    <div class="card card-body replay-input-section">
+                        <p class="user-tiket ms-3"></p>
+                        <textarea class="form-control tiket-answer-input" id="replay-tiket" rows="3"
+                            placeholder="متن پاسخ" required="">
+                        </textarea>
+                        <button class="btn btn-primary ms-4 my-2 send-admin-answer">ارسال</button>
+                    </div>
+                </div>
+                <div class="modal-body users-tikets">
+                    <div class="tiket-container">
+                   <!-- <div class="question-section mt-3">
+                            <div class="question-header">
+                                <i class="bi bi-hourglass-split text-warning"></i>
+                                <button class="infos-btn question-header" data-bs-toggle="collapse" href="#question">
+                                    موضوع تیکت
+                                </button>
+                            </div>
+                            <div class="collapse multi-collapse" id="question">
+                                <div class="user-question">
+                                    <h6 class="m-0"> قسمت مربوط به سوال کاربر</h6>
+                                </div>
+                                <div class="answer-section">
+                                    <h6 class="m-0"> پاسخ شما : <span> </span></h6>
+                                </div>
+                                <p>
+                                    <button class="answer-tiket" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseExample">
+                                        پاسخ
+                                    </button>
+                                </p>
+                                <div class="collapse" id="collapseExample">
+                                    <div class="card card-body">
+                                        <textarea class="form-control tiket-answer-input" rows="3" placeholder="متن پاسخ" required="">
+                                        </textarea>
+                                    </div>
+                                    <button class="btn btn-primary ms-4 my-2 send-admin-answer">ارسال</button>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end users tikets modal -->
+
+    <!-- ///////////////////// modal delete one product in page ////////////////// -->
+    <div class="modal-deleteOne-parent">
+        <div class="row modal-deleteOne text-center">
+            <span class="X4">&times;</span>
+            <div>
+                <div class="mb-4 text-warning fs-4">
+                    <i class="bi bi-exclamation-triangle"></i>
+                </div>
+                <p class="fw-bold fs-5 text-dark">برای <span class="deletename text-danger fs-4">حذف پارکت </span>
+                    ازفروشگاه مطمئن هستید؟ </p>
+                <h5 class="fw-bold mb-4">در صورت تایید قادر به بازگشت نیست.</h5>
+            </div>
+            <div class="delete-buttons">
+                <button class="yes-deleteOne btn-danger py-1 px-3 fw-bold me-4"> بلـه </button>
+                <button class="no-deleteOne btn-primary py-1 px-3 fw-bold"> خیر </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ///////////////////// admin modal delete one product in product container ////////////////// -->
+    <div class="modal-deleteOne-parent2">
+        <div class="row text-center modal-deleteOne2">
+            <span class="X5">&times;</span>
+            <div>
+                <div class="mb-4 text-warning fs-4">
+                    <i class="bi bi-exclamation-triangle"></i>
+                </div>
+                <p class="fw-bold fs-5 text-dark">برای حذف محصول مورد نظر ازفروشگاه مطمئن هستید؟ </p>
+                <h5 class="fw-bold mb-4">در صورت تایید قادر به بازگشت نیست.</h5>
+            </div>
+            <div class="delete-buttons">
+                <button class="yes-deleteOne2 btn-danger py-1 px-3 fw-bold me-4"> بلـه </button>
+                <button class="no-deleteOne2 btn-primary py-1 px-3 fw-bold"> خیر </button>
+            </div>
+        </div>
+    </div>
+    <!-- /////////////////   modal clear all /////////////////// -->
+    <div class="modal-parent22">
+        <div class="row modal22 text-center">
+            <span class="X3">&times;</span>
+            <div>
+                <h5 class="fw-bold">آیا مطمئن هستید که میخواهید تمام محصولات را پاک کنید؟</h5>
+            </div>
+            <div class="mt-3">
+                <button class="yes btn-danger py-1 px-3 fw-bold me-4"> بلـه </button>
+                <button class="no btn-primary py-1 px-3 fw-bold"> خیر </button>
+            </div>
+        </div>
+    </div>
+    <!-- ////////////////////// add product modal //////////////////////// -->
+    <div class="addparent-modal">
+        <div class="row addProduct-modal2 py-3 text-center">
+            <div>
+                <p class="fw-bold fs-5 text-dark"> محصول <span class="add-name text-danger fs-4"> </span> با موفقیت به
+                    فروشگاه اضافه شد.برای مشاهده، صفحه فروشگاه را یکبار رفرش کنید 😃✌</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+
+    <script src="./js/controlP.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

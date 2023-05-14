@@ -1,0 +1,49 @@
+/* users infoes */
+#users-tab-pane,
+#usersTikets {
+    font-family: "Vazir", Arial, Helvetica, sans-serif;
+}
+
+.users-cards .card-body h6 {
+    color: #6c757d;
+}
+
+.dark .users-cards .card-body h6 {
+    color: #eee;
+}
+
+#usersInfoes input {
+    border-top: none;
+    font-weight: bold;
+    padding-right: 2rem;
+}
+
+#usersInfoes label {
+    font-weight: bold;
+    color: #999999;
+}
+
+.answer-tiket {
+    width: 5rem;
+    height: 2rem;
+    color: #0d6efd;
+    background-color: #fff;
+    border: 1px #0d6efd solid;
+    margin-right: 1rem;
+}
+
+.answer-tiket:hover {
+    color: #fff;
+    background-color: #0d6efd;
+}
+
+.send-admin-answer {
+    width: 6rem;
+}
+
+.dark .user-question {
+    color: black;
+}
+
+
+

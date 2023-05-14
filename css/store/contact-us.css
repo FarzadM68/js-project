@@ -1,0 +1,26 @@
+.basket-page-header img {
+    width: 10rem;
+}
+
+.basket-page-header h5 {
+    font-weight: bold;
+    color: #fd7e14;
+}
+
+.contacts i {
+    font-size: 1.5rem;
+    color: #fd7e14;
+    margin: .5rem 0 0 .9rem;
+}
+
+.addrass {
+    background-color: #f6f6f6;
+    padding: .75rem;
+    padding-top: 1.5rem;
+    height: 21rem;
+    margin-top: 3rem;
+}
+
+.dark .addrass {
+    color: black;
+}

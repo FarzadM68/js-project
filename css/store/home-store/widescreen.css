@@ -1,0 +1,27 @@
+/* body{
+    background-color: aquamarine;
+} */
+
+.basket #section2 .basket-user .add-product .delete {
+    flex-direction: row;
+    width: 45%;
+}
+
+.basket #section2 .basket-user .add-product .delete .btn-del {
+    margin: 0;
+}
+
+.basket #section2 .basket-user .add-product .small-img {
+    flex-direction: column-reverse;
+    width: 35%;
+}
+
+.basket #section2 .basket-user .add-product .price {
+    width: 20%;
+}
+
+.modal-parent .modal {
+    width: 60%;
+    top: 50%;
+    right: -10%;
+}
